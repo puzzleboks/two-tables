@@ -15,7 +15,7 @@
   <h1 tabindex="0">Accessible Responsive Table Test</h1>
 
   <table tabindex="0" class="table bordered-cells mobile-only hide-rows">
-    <tbody class="wide-as-table-row">
+    <!--<tbody class="wide-as-table-row">
         <tr class="wide-as-table-cell show-row"><td class="header">Reason for Payment</td><td>Shared Responsibility Payment (select Installment Agreement)</td></tr>
         <tr class="wide-as-table-cell show-row"><td class="header">Payment Type</td><td>Health Care (Form 1040)</td></tr>
         <tr class="wide-as-table-cell show-row"><td class="header">Tax Year</td><td>2014</td></tr>
@@ -26,6 +26,26 @@
         <tr class="wide-as-table-cell show-row"><td class="header">Payment Type</td><td>1040</td></tr>
         <tr class="wide-as-table-cell show-row"><td class="header">Tax Year</td><td>2013</td></tr>
         <tr class="wide-as-table-cell show-row"><td class="header">Amount Owed</td><td>$205.25</td></tr>
+    </tbody>-->
+    <tbody class="responsive-table-rows">
+      <tr><th id="reason-for-payment-mobile">Reason for Payment</th></tr>
+      <tr><td headers="reason-for-payment-mobile">Shared Responsibility Payment (select Installment Agreement)</td></tr>
+      <tr><th id="reason-for-payment-mobile">Payment Type</th></tr>
+      <tr><td headers="payment-type-mobile">Health Care (Form 1040)</td></tr>
+      <tr><th id="reason-for-payment-mobile">Tax Year</th></tr>
+      <tr><td headers="tax-year-mobile">2014</td></tr>
+      <tr><th id="reason-for-payment-mobile">Amount Owed</th></tr>
+      <tr><td headers="amount-owed-mobile">$644.57</td></tr>  
+    </tbody>
+    <tbody class="responsive-table-rows">
+      <tr><th>Reason for Payment</th></tr>
+      <tr><td headers="reason-for-payment-mobile" >Tax Return or Notice</td></tr>
+      <tr><th>Payment Type</th></tr>
+      <tr><td headers="payment-type-mobile">1040</td></tr>
+      <tr><th>Tax Year</th></tr>
+      <tr><td headers="tax-year-mobile">2013</td></tr>
+      <tr><th>Amount Owed</th></tr>
+      <tr><td headers="amount-owed-mobile">$205.25</td></tr>  
     </tbody>
   </table>
 
