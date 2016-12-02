@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Responsive Table CSS</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+  <h1 tabindex="0">Accessible Responsive Table Test</h1>
+
+  <table tabindex="0" class="table bordered-cells mobile-only hide-rows">
+    <tbody class="wide-as-table-row">
+        <tr class="wide-as-table-cell show-row"><td class="header">Reason for Payment</td><td>Shared Responsibility Payment (select Installment Agreement)</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Payment Type</td><td>Health Care (Form 1040)</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Tax Year</td><td>2014</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Amount Owed</td><td>$644.57</td></tr>
+    </tbody>
+    <tbody class="wide-as-table-row mobile-space-before-block">
+        <tr class="wide-as-table-cell show-row"><td class="header">Reason for Payment</td><td>Tax Return or Notice</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Payment Type</td><td>1040</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Tax Year</td><td>2013</td></tr>
+        <tr class="wide-as-table-cell show-row"><td class="header">Amount Owed</td><td>$205.25</td></tr>
+    </tbody>
+  </table>
+
+  <table tabindex="0" class="table bordered-cells wide-only">
+      <tr class="wide-only wide-as-table-row">
+        <th id="Reason-for-Payment">Reason for Payment</th>
+        <th id="Payment-Type">Payment Type</th>
+        <th id="Tax-Year">Tax Year</th>
+        <th id="Amount-Owed">Amount Owed</th>
+      </tr>
+    <tr class="wide-as-table-row">
+        <td headers="Reason-for-Payment">Shared Responsibility Payment (select Installment Agreement)</td>
+        <td headers="Payment-Type">Health Care (Form 1040)</td>
+        <td headers="Tax-Year">2014</td>
+        <td headers="Amount-Owed">$644.57</td>
+    </tr>
+    <tr class="wide-as-table-row mobile-space-before-block">
+        <td headers="Reason-for-Payment">Tax Return or Notice</td>
+        <td headers="Payment-Type">1040</td>
+        <td headers="Tax-Year">2013</td>
+        <td headers="Amount-Owed">$205.25</td>
+    </tr>
+  </table>
