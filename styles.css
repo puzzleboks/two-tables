@@ -1,0 +1,83 @@
+
+.hide-rows tr {
+  visibility: hidden;
+}
+
+.hide-rows tr.show-row {
+  visibility: visible;
+}
+
+.bordered-cells td, .bordered-cells th {
+  border: 1px solid #ccc;
+}
+
+/* Beginning of Responsive Accessible Table CSS logic */
+
+.mobile-table-row-substitute span:first-child, .wide-as-table-header, .header {
+  font-weight: bold;
+  color: black;
+}
+
+.mobile-space-before-block {
+  _border-top: 30px solid green !important;
+  margin-top: 5em;
+}
+
+@media screen and (max-width: 40em) {
+  .wide-only {
+    display: none;
+  }
+
+  /* Mobile table substitute styles */
+  .mobile-table-row-substitute span:after {
+      content: "";
+      display: block;
+      line-height: 1px;
+      color: transparent;
+  }
+
+  .mobile-table-row-substitute:not(:last-child):after {
+      content: "\00a0";
+      display: block;
+      line-height: 1em;
+      color: transparent;
+  }
+
+  .mobile-space-before-block:before {
+    content: "\00a0";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 40em) {
+
+  .bordered-cells {
+    border: 1px solid #ccc;
+  }
+
+  .wide-as-table-row {
+    display: table-row;
+  }
+
+  .wide-as-table-header {
+    display: table-cell;
+  }
+
+  .mobile-only, .wide-as-table-cell > td.mobile-only {
+    display: none;
+  }
+
+  .wide-as-table-cell {
+    display: table-cell;
+    border: 1px solid #ccc;
+    padding: .5em;
+  }
+
+  .wide-as-table-cell > td {
+    display: inline;
+    border: 0px !important;
+  }
+}
